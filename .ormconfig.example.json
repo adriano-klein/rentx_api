@@ -6,12 +6,12 @@
   "password":"ignite",
   "database": "rentx",
   "entities": [
-    "./src/modules/car/infra/typeorm/entities/*.ts",
-    "./src/modules/accounts/infra/typeorm/entities/*.ts",
-    "./src/modules/rentals/infra/typeorm/entities/*.ts"
+    "./dist/modules/car/infra/typeorm/entities/*.js",
+    "./dist/modules/accounts/infra/typeorm/entities/*.js",
+    "./dist/modules/rentals/infra/typeorm/entities/*.js"
  ],
-  "migrations":["./src/shared/infra/typeorm/migrations/*.ts"],
+  "migrations":["./dist/shared/infra/typeorm/migrations/*.js"],
   "cli": {
-    "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    "migrationsDir": "./dist/shared/infra/typeorm/migrations"
   }
 }
