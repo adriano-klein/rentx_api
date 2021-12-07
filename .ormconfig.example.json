@@ -1,17 +1,17 @@
 {
   "type": "postgres",
-  "port": 5432,
+  "port": 55432,
   "host": "localhost",
   "username":"docker",
   "password":"ignite",
   "database": "rentx",
   "entities": [
-    "./dist/modules/car/infra/typeorm/entities/*.js",
-    "./dist/modules/accounts/infra/typeorm/entities/*.js",
-    "./dist/modules/rentals/infra/typeorm/entities/*.js"
+    "./src/modules/car/infra/typeorm/entities/*.ts",
+    "./src/modules/accounts/infra/typeorm/entities/*.ts",
+    "./src/modules/rentals/infra/typeorm/entities/*.ts"
  ],
-  "migrations":["./dist/shared/infra/typeorm/migrations/*.js"],
+  "migrations":["./src/shared/infra/typeorm/migrations/*.ts"],
   "cli": {
-    "migrationsDir": "./dist/shared/infra/typeorm/migrations"
+    "migrationsDir": "./src/shared/infra/typeorm/migrations"
   }
 }
