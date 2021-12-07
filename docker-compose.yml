@@ -3,13 +3,13 @@ version: "3.7"
 services: 
   database:
     image: postgres
-    container_name: database_ignite
+    container_name: database_rentx_api
     restart: always
     ports: 
-      - 5432:5432
+      - 55432:5432
     environment:
       - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=ignite
+      - POSTGRES_PASSWORD=123@troca
       - POSTGRES_DB=rentx
     volumes:
       - pgdata:/data/postgres
