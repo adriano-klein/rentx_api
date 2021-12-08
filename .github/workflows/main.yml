@@ -33,7 +33,7 @@ jobs:
           source: "., !node_modules"
           target: "~/app/rentx_api"
           
-      - name: multiple command
+      - name: Update API
         uses: appleboy/ssh-action@master
         with:
           hhost: ${{ secrets.SSH_HOST }}
