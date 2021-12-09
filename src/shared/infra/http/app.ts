@@ -8,6 +8,7 @@ import swaggerUi from "swagger-ui-express";
 import upload from "@config/upload";
 
 // eslint-disable-next-line import-helpers/order-imports
+import cors from "cors";
 import swaggerFile from "../../../swagger.json";
 import "../container";
 
@@ -17,6 +18,7 @@ import { router } from "./routes";
 
 createConnection();
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use("/avatar", express.static(`${upload.tmpFolder}/avatar`));
