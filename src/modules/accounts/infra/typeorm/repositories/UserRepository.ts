@@ -4,9 +4,9 @@ import { ICreateUserDTO } from "../../../dtos/ICreateUserDTO";
 import { IUserRepository } from "../../../repositories/IUserRepository";
 import { User } from "../entities/User";
 
-class UserRepository implements IUserRepository {
+class UsersRepository implements IUserRepository {
   private repository: Repository<User>;
-
+  
   constructor() {
     this.repository = getRepository(User);
   }
@@ -42,4 +42,4 @@ class UserRepository implements IUserRepository {
   }
 }
 
-export { UserRepository };
+export { UsersRepository };
