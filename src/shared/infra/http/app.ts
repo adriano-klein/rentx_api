@@ -19,7 +19,6 @@ import { router } from "./routes";
 
 createConnection();
 const app = express();
-
 app.use(rateLimiter);
 app.use(cors());
 
