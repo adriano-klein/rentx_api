@@ -17,7 +17,8 @@ export default async function rateLimiter(
     },
   });
 
-
+  await redisClient.connect()
+  
   const limiter = new RateLimiterRedis({
     storeClient: redisClient,
     keyPrefix: "rateLimiter",
@@ -26,8 +27,8 @@ export default async function rateLimiter(
   });
   try {
     await limiter.consume(request.ip);
-
     return next();
+    
   } catch (err) {
     throw new AppError(err.message, 429);
   }
